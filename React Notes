@@ -1,0 +1,12 @@
+For Yarn-
+yarn global add live-server
+
+To see live server version-
+live-server -v
+
+To open live server page-
+live-server public
+
+React Script Tags-
+    <script src="http://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react-dom.development.js"></script>
