@@ -9,7 +9,12 @@ live-server public
 
 Yarn init- same as npm install but for yarn
  //-----------------------------------------------------------------------------------------------------------------
- 
+
+NPM install React
+yarn add react react-dom 
+
+ //-----------------------------------------------------------------------------------------------------------
+
 React Script Tags-
     <script src="http://unpkg.com/react@16.0.0/umd/react.development.js"></script>
     <script src="http://unpkg.com/react@16.0.0/umd/react-dom.development.js"></script>
@@ -21,3 +26,6 @@ npm install -g babel-cli@6.24.1
 -or- 
 yarn global add babel-cli
 yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+
+Specifying path for babel- 
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch (adding --watch will log changes_
