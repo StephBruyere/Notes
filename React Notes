@@ -59,5 +59,21 @@ All arrow functions are anon you have to assign them to a variable;
  Arrow Function Expression Syntax: implicintely returned
    const squareArrow = (x) => x * x;
    
-   
+arguements are no longer bound with arrow functions
+
+//---------------------------
+
+ const user = {
+    name: "Steph",
+    cities: ["Philly", "CLE", "London"],
+    printPlacesLived() {
+        this.cities.forEach((city) => {
+            console.log(this.name + "  I've lived in " + city)
+        })
+    }
+};
+
+user.printPlacesLived();
+
+//---------------------------
    
