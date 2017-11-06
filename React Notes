@@ -27,5 +27,12 @@ npm install -g babel-cli@6.24.1
 yarn global add babel-cli
 yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
 
-Specifying path for babel- 
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch (adding --watch will log changes_
+Specifying path for babel- (adding --watch will log changes)
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch 
+
+ //------------------------------------------------------------------------------------
+ 
+ React Cheat Sheet:
+ ? (checks to see if a condition is true or false)
+ && (logical && operator: if both are true or false || If true will show the second value, if false, false will be used) 
+ True, False, Null (ignored by JSX)
