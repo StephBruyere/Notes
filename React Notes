@@ -36,3 +36,28 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
  ? (checks to see if a condition is true or false)
  && (logical && operator: if both are true or false || If true will show the second value, if false, false will be used) 
  True, False, Null (ignored by JSX)
+
+//------------------------------------------------------------------------------------
+
+Let & Cont
+ 
+Function Scoped & Block Level Scoped (scoped to blocks like if statements or loops)
+Let: reassign a variable
+Const: default for a variable
+
+//---------------------------
+
+Arrow Functions
+
+All arrow functions are anon you have to assign them to a variable;
+=> : revised function (
+     const square = (x) => {
+       return x * x;
+       };
+   console.log(square(9) // output 81
+   
+ Arrow Function Expression Syntax: implicintely returned
+   const squareArrow = (x) => x * x;
+   
+   
+   
