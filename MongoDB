@@ -42,9 +42,13 @@ Update Results:
   //get id if you only want to change one instance  
   /you can $set anytime to add an additional row (MongoDB just creates things if they don't exist)
   >db.classroom.update({"Name":"Rick"}, {$push: {"Name": "Morty"}}) //replace or update data
+  >db.classroom.update({"Name":"Steph"}, {$push : {"Hobbies" : "Dancing"}})
+  >db.classroom.update({"name":"Steph"}), {$set : {"OS" : "Mac"}})
+  >db.classroom.remove({"name":"Steph"})
+  >db.classroom.update({}, $set : {"gavecandy":false}, {multi:true})
   
 Delete"  
   >db.classroom.remove({"Name":"Rick"}) //remove just data 
   >db.classroom.remove({}) //remove whole row or table
-  /
+  
   
