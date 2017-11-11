@@ -6,9 +6,27 @@
   > mongo
   
   Create a Database- in command prompt
-    >use "database name here"
+    >use "database name here" //declare what database you want to use
     >db // lists the databases
     >db."table name".insert
     >db.places.insert({"continent": "Africa, "country": "Morocco", "major cities": ["Casablana", "Fez", "Marrakech"]}) WriteResults({nInserted" : 1 })  
     >db.places.find()
     >db.places.find({"country":"United States"}).pretty()
+
+Getting Started tutorial - https://docs.mongodb.com/getting-started/shell/tutorial/install-mongodb-on-windows/
+
+Import data in to a collection-
+  >mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-dataset.json
+  
+  Greater Than Operator ($gt)
+  Less Than Operator ($lt)
+  >db.restaurants.find( { "grades.score": { $lt: 10 } } )
+  
+ Logical AND
+You can specify a logical conjunction (AND) for a list of query conditions by separating the conditions with a comma in the conditions document.
+  >db.restaurants.find( { "cuisine": "Italian", "address.zipcode": "10075" } )
+  
+ Logical OR
+You can specify a logical disjunction (OR) for a list of query conditions by using the $or query operator.
+  >db.restaurants.find(
+   { $or: [ { "cuisine": "Italian" }, { "address.zipcode": "10075" } ] }
