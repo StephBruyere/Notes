@@ -1,0 +1,2 @@
+Installation- Download, enter folder in program files, enter all folders till you get to bin. open command prompt in bin.
+  >mongodd.exe --dbpath data (if you don't specify a path you have to create a folder called data in the bin folder. and use --dbpath data                              to get functioning otherwise you can just use mongod.exe
