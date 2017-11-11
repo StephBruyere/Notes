@@ -1,2 +1,14 @@
-Installation- Download, enter folder in program files, enter all folders till you get to bin. open command prompt in bin.
+//Installation- Download, enter folder in program files, enter all folders till you get to bin. open command prompt in bin.
   >mongodd.exe --dbpath data (if you don't specify a path you have to create a folder called data in the bin folder. and use --dbpath data                              to get functioning otherwise you can just use mongod.exe
+
+//You will need to start the server with mongod.exe everytime to start the server
+//The go back in to the bin folder and open another command prompt- This time just type
+  > mongo
+  
+  Create a Database- in command prompt
+    >use "database name here"
+    >db // lists the databases
+    >db."table name".insert
+    >db.places.insert({"continent": "Africa, "country": "Morocco", "major cities": ["Casablana", "Fez", "Marrakech"]}) WriteResults({nInserted" : 1 })  
+    >db.places.find()
+    >db.places.find({"country":"United States"}).pretty()
