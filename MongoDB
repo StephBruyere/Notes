@@ -9,7 +9,8 @@
     >use "database name here" //declare what database you want to use
     >db // lists the databases
     >db."table name".insert
-    >db.places.insert({"continent": "Africa, "country": "Morocco", "major cities": ["Casablana", "Fez", "Marrakech"]}) WriteResults({nInserted" : 1 })  
+    >db.places.insert({"continent": "Africa, "country": "Morocco", "major cities": ["Casablana", "Fez", "Marrakech"]})                
+    >WriteResults({nInserted" : 1 })  //will write itself when you hit enter
     >db.places.find()
     >db.places.find({"country":"United States"}).pretty()
 
@@ -30,3 +31,20 @@ You can specify a logical conjunction (AND) for a list of query conditions by se
 You can specify a logical disjunction (OR) for a list of query conditions by using the $or query operator.
   >db.restaurants.find(
    { $or: [ { "cuisine": "Italian" }, { "address.zipcode": "10075" } ] }
+
+Sort Query Results
+To specify an order for the result set, append the sort() method to the query. Pass to sort() method a document which contains the field(s) to sort by and the corresponding sort type, e.g. 1 for ascending and -1 for descending.
+  >db.restaurants.find().sort( { "borough": 1, "address.zipcode": 1 } )
+  
+Update Results:
+  >db.classroom.update({"row":"2"},{$set: {"row" : 2 }})
+  >db.classroom.update({"row":"2"},{$set: {"row" : 2 }}, {multi:true}) //multi: true updates all instances of an object
+  //get id if you only want to change one instance  
+  /you can $set anytime to add an additional row (MongoDB just creates things if they don't exist)
+  >db.classroom.update({"Name":"Rick"}, {$push: {"Name": "Morty"}}) //replace or update data
+  
+Delete"  
+  >db.classroom.remove({"Name":"Rick"}) //remove just data 
+  >db.classroom.remove({}) //remove whole row or table
+  /
+  
