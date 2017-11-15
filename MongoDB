@@ -51,4 +51,21 @@ Delete"
   >db.classroom.remove({"Name":"Rick"}) //remove just data 
   >db.classroom.remove({}) //remove whole row or table
   
+  Sorting: //use 1 for acsending and -1 of decending
+  db.animals.find().sort({_id:1}) //or
+  { age : -1, posts: 1 }
   
+  Using Mongo in with the DOM-
+  >app.get("/", function(req, res) { res.send("Hello world") });
+  
+  //empty brackets indicate select all
+    >app.get("/", function (req, res) {
+    db.animals.find({}, function (err, found) {
+    if (err) { console.log(err)} else {res.json(found); } }),; });
+    
+    //use the /name to indicate what you want to find
+      >app.get("/name", function(req, res) {
+        db.animals.find().sort({name : 1}, function (err, found) } else {res.json(found); } }); });
+   
+   
+        
