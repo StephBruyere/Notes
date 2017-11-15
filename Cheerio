@@ -1,0 +1,7 @@
+Cheerio
+
+Web scraping- going our and pulling information off the web. Like a bot. Like search engines- they scrap info, put it in a database which allows you to query the information.
+
+https://cheerio.js.org/
+npm install cheerio
+
