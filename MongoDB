@@ -66,6 +66,44 @@ Delete"
     //use the /name to indicate what you want to find
       >app.get("/name", function(req, res) {
         db.animals.find().sort({name : 1}, function (err, found) } else {res.json(found); } }); });
-   
-   
         
+  //============================================================================================================ 
+   When searching by id you have to use, if you set it up differently it will not work:
+    > db.books.update({ "_id": mongojs.ObjectId(req.params.id)
+  }, 
+  { $set: { "read": false } 
+  },
+  function(error, edited) {
+    if (error) {
+      console.log(error);
+      res.send(error);
+    }
+    else {
+      console.log(edited);
+      res.send(edited);
+    }
+  });
+  //============================================================================================================  
+  
+  Mongoose:
+  
+Promise- make a request in the server code, but becasue of the async nature of the process, when you make the call, javascript will continue to execute. a promise has a then capability. It runs, then the promise executes. Once you initiate a promise, it will execute, it can not be stopped. (an observable which is similar can be stopped)
+
+Schema- just means database structure
+
+var data= {
+array : [],
+boolean: false,
+string:  ,
+number: ,
+}
+
+Mongoose lets you define custom functions on the schema. You can add whatever functionality you want, like (is awesome?)
+UserSchema.methods.setFullName = function(fullName) {
+    this.firstName + this.lastName;
+    return this / fullName;
+}
+
+
+
+
