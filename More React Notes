@@ -1,0 +1,3 @@
+React has the concept of a virtual dom, serves as an intermediary dom server to minimize to amount of changes pushed to the browser for performance. 
+React does not support Ajax. 
+Common.js is a module loader. 
