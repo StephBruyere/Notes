@@ -1,4 +1,6 @@
 For Yarn-
+install yarn- npm install -g create-react-app yarn
+
 yarn global add live-server
 
 To see live server version-
