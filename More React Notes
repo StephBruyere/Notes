@@ -1,3 +1,8 @@
 React has the concept of a virtual dom, serves as an intermediary dom server to minimize to amount of changes pushed to the browser for performance. 
 React does not support Ajax. 
 Common.js is a module loader. 
+
+All code inserted in react should be populated in to your root containder (example) <div class = "root">
+Webpack- gives all files a name of bundle.js (combines all files in to one file);
+
+You can only have one single node per component for react files (example, one file for a nav bar, one for jumbotron)
