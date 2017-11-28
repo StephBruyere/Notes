@@ -50,4 +50,21 @@ render (
  
  *check out httpster it's an npm package that sets up a mini server.
  
+ ### Bundling:
+ Change script tag to java script and src to bundle.js
+ Create a package.json in npm
+ Install babel, react
+ Manipulate folder structure
+ Dist- index.html //everything for the browser
+ Src- index.js, bundle.js //everything for react
+ 
+ Create babel.rc file //this is for all the presets that will be translated through babel
+   {
+   'presets' : [ 'latest', 'react', 'stage-0']
+   }
+   
+   Then install with npm install: 
+     Npm install babel-presets-react@(current version here) --save-dev
+     Same for latest and stage zero.
+    
  
