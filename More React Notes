@@ -33,3 +33,14 @@ Const style = {
     "Hi"
     {Id:"title", className: "header", style:style},
     )
+
+### JSX 
+JSX helps simplif it down further (native / built in)
+render (
+ <h1 id = 'title'
+  className = 'header'
+  style = {style}>
+  Hello world
+  </h1>
+  document.getElementById('react-container)
+  )
