@@ -44,3 +44,10 @@ render (
   </h1>
   document.getElementById('react-container)
   )
+
+### Babel note:
+ //in your index.html file. Include <script type="text/babel" src="index.js"></script> for the transpillar to run.
+ 
+ *check out httpster it's an npm package that sets up a mini server.
+ 
+ 
