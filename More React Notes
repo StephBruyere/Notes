@@ -55,8 +55,8 @@ render (
  Create a package.json in npm
  Install babel, react
  Manipulate folder structure
- Dist- index.html //everything for the browser
- Src- index.js, bundle.js //everything for react
+ Dist- index.html, bundle.js //everything for the browser
+ Src- index.js //everything for react
  
  Create babel.rc file //this is for all the presets that will be translated through babel
    {
@@ -66,5 +66,10 @@ render (
    Then install with npm install: 
      Npm install babel-presets-react@(current version here) --save-dev
      Same for latest and stage zero.
+     
+     After npm install save the files to the bundle.js
+     Babel ./src/index.js --out file .dist/bundle.js
+  
+  Optional: you can go in to the package json file and add "start": "httpster -d .dist -p 3000 // to auto start server if you use httpster
     
  
