@@ -19,3 +19,6 @@ ReactDOM.render(
   document.getElementById ("react-container")
   )
  
+//you can also remove render and create element by declaring them globally.
+Const {createElement} = React
+Const {render} = ReactDOM
