@@ -22,3 +22,14 @@ ReactDOM.render(
 //you can also remove render and create element by declaring them globally.
 Const {createElement} = React
 Const {render} = ReactDOM
+
+### add a css style
+Const style = {
+  Color: "white",
+  FontFamily:"arial"
+  }
+  
+  Const title = createElement (
+    "Hi"
+    {Id:"title", className: "header", style:style},
+    )
