@@ -1,0 +1,2 @@
+Best practice is to use params when doing a get request and use body for post, put, and delete.
+Order is usually (parameter, err)
