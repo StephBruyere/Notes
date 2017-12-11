@@ -106,3 +106,63 @@ you don't need curly braces for for statements if it is all on one line. (anythi
 
 hasNext - This is for booleans. This says, is the string coming in double or int or string otherwise just move on. 
 
+/////////////////////////////////////////////////////////////////////
+
+Functions
+
+public class Function {
+ void printName(String firstname, string last name) //everything in the () is called the function signature. You pass through the function arguements here. If you put in 2 arguemetns with multi signatures, that is call arguement overloading.
+ { this.pringName(firstName):
+ } // everything within the braces is the function body. Everytime you write one of these, it should only do one thing.
+
+Void is used when you are creating a class that will not return any value. Java always needs to know what to expect. So if you will get a string after to perform the action you would need to label string, if you expect a number you would label int, double, or whatever type of number will come back. Meaning you are literally not using a return inside of your function body
+
+double divide(int x, int y) {
+return x / y; 
+<T> void printInput(T input) {
+System.out.println(your input was: " " + input.toString() + ""."");
+ 
+/////////////////////////////////////////////////////////////////////
+
+Static attachs values to the class itself. When you omit the static keyword it gets attached to an instance of the class
+
+foo ();
+String foo = MyFoo.foo();
+
+MyFoo fx = new MyFoo();
+String foo2 = fx.foo(); //MyFoo fx is an instance of the foo class. The static Foo members pass attr. to all instances, but instances can't pass attr. back to Static. You need to new in order to make an instance.
+
+public class Myfoo {
+public static string foo()
+{return 'foo';)
+public string foo () {return 'foo2'}
+}
+
+/////////////////////////////////////////////////////////////////////
+
+When you have package console, it is looking for the file in a folder called Console. So rename your folder to Console. 
+
+/////////////////////////////////////////////////////////////////////
+
+A class is an object but not necessarilly the other way around.
+Constructor is the entry point for the object. A Constructor sets up your object
+
+public String user;
+private String email;
+
+User(string username, String email) { //this is a constructor, it tells the constructor that it will only work if you pass in 2 objects.
+this.setUserbame(username); //the this method does not exist in a static method. you are saying your calling this from this instance. 
+
+Anytime you need to call to an object for a static object you have to call the actual name (example: user.CreateUser)
+
+public static void main (String[] args) {
+  User jim = new User ("Jim", "jim@email.com");
+  jim.introduce();
+  
+  System.out.println(User.get Count());
+  User throwaway = new User("","");
+  System.out.prinln(User.getCount());
+  
+
+
+
