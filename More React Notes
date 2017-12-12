@@ -82,3 +82,55 @@ The list-items have memory from one render to the next. For instance, when a to-
 A list's order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
 If neither of these conditions are true, then you don't have to worry about keys. If you aren't sure then it never hurts to use them!
  
+A component's props is an object. It holds information about that component.
+
+You can pass information to a React component. How? By giving that component an attribute
+
+If you want to pass information that isn't a string, then wrap that information in curly braces. Here's how you would pass an array:
+<Greeting myInfo={["top", "secret", "lol"]} />
+
+props is the name of the object that stores passed-in information. this.props refers to that storage object. At the same time, each piece of passed-in information is called a prop. This means that props could refer to two pieces of passed-in information, or it could refer to the object that stores those pieces of information 
+
+You define an event handler as a method on the component class, just like the render method. Almost all functions that you define in React will be defined in this way, as methods in a class.
+
+Both naming choices occur in the parent component class - that is, in the component class that defines the event handler and passes it.
+
+The first name that you have to choose is the name of the event handler itself.
+
+Look at Talker.js, lines 6 through 12. This is our event handler. We chose to name it talk.
+
+The second name that you have to choose is the name of the prop that you will use to pass the event handler. This is the same thing as your attribute name.
+
+For our prop name, we also chose talk, as shown on line 15:
+
+return <Button talk={this.talk} />;
+These two names can be whatever you want. 
+
+Your prop name should be the word on, plus your event type. If you are listening for a "click" event, then you name your prop onClick. If you are listening for a "keyPress" event, then you name your prop onKeyPress:
+
+class MyClass extends React.Component {
+  handleHover() {
+    alert('I am an event handler.');
+    alert('I will listen for a "hover" event.');
+  }
+
+  render() {
+    return <Child onHover={this.handleHover} />;
+  }
+}
+
+Every component's props object has a property named children.
+this.props.children will return everything in between a component's opening and closing JSX tags.
+
+If a component has more than one child between its JSX tags, then this.props.children will return those children in an array. However, if a component has only one child, then this.props.children will return the single child, not wrapped in an array.
+
+The defaultProps property should be equal to an object:
+
+class Example extends React.Component {
+  render() {
+    return <h1>{this.props.text}</h1>;
+  }
+}
+
+// Set defaultProps equal to an object:
+Example.defaultProps = {};
