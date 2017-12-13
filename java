@@ -163,6 +163,36 @@ public static void main (String[] args) {
   User throwaway = new User("","");
   System.out.prinln(User.getCount());
   
+/////////////////////////////////////////////////////////////////////
 
+Exceptions
 
+class Throw {
+public static void main (String [] args) {
+printSeperator();
+try {
+throw new Exception("Error!");}
+catch (Exception e) {
+System.out.println ("Exception caught");}
+System.out.println("This will now run")
+printSeperator();}
+//Unhandled expression means it bubbled up to the UI and the user will see the error. 
 
+/////////////////////////////////////////////////////////////////////
+
+... //the variable can take in an infinite number of values. But when you use the elipse you have to use the keyword final. Its the = of const in EX6. You can't modify anything tagged final.
+private static void greetStudents (final String ... name) {
+for (String name : name) {
+System.out.println(String.format("Hello, %s!", name));
+}
+
+You have to import (import static java.util.Arrays.stream;)
+.stream // Stream is a thing you are being given to read. A stream is constant unless it is specified to end by program or end of data.
+.stream(names)
+.forEach((String name) -> {
+System.out.println(String.format("Hellow %s!", name));
+})
+
+inheritecnce, abstraction, polymorphism- just read up on object oriented programming.
+Class are a concrete object, you have to New them to change them. 
+You want to code to an abstraction not a concrete object. 
