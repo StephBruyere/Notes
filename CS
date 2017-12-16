@@ -1,0 +1,45 @@
+Set of instructions you need to complete to get an objective done. 
+
+BenchMark- this tests code effeciency. 
+// Benchmark is a library that times
+var Benchmark = require("benchmark");
+var generate = require("../shared/generate");
+
+// Generate an array of the given length.
+var length = 100000000;
+var stuff = generate(length);
+var randomValue = stuff[Math.ceil(Math.random() * length)];
+
+// A "suite" is a series of code snippets you
+//   want to execute and time.
+var suite = new Benchmark.Suite();
+
+suite
+// Add the function 'linearSearch' to the suite.
+  .add("Linear Search", function linearSearch() {
+    for (var i = 0; i < stuff.length; i += 1) {
+      if (stuff[i] === randomValue) {
+        return stuff[i];
+      }
+    }
+    return false;
+  })
+  // On 'start', run the 'start' function.
+  .on("start", function start() {
+    console.log("Beginning benchmark...");
+  })
+
+  // On the 'complete' event, run the 'report' function.
+  .on("complete", function report() {
+    // Get successful benchmark.
+    var benchmark = Benchmark.filter(this, "successful")[0];
+
+    console.log("On average, " + benchmark.name + " took " + benchmark.stats.mean + " seconds to complete.");
+  })
+
+  // Run the test!
+  .run();
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Binary search works on sorted arrays. Binary search begins by comparing the middle element of the array with the target value. If the target value matches the middle element, its position in the array is returned. If the target value is less than or greater than the middle element, the search continues in the lower or upper half of the array, respectively, eliminating the other half from consideration.[7]  TLDR- Start in middle, if not right, split the array and repeat. 
+
