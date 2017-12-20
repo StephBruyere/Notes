@@ -1,0 +1,11 @@
+Big O notation:let us describe how running times scale when we increase input size. 
+
+Data Structures: 
+LIFO- Last in First Out data structures
+Queues: FIFO- First in First Out data Structure
+
+A linked list like a train- it knows what is before it, it knows whats after it but nothing else. It knows its child and it knows it's parent but nothing else. Like an installation wizard.
+
+Dictionaries are key value pairs. It is a list of things where the key will always be unique. In javascript they are called maps. 
+
+Trees- 
